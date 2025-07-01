@@ -2,5 +2,103 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-    background-image: url("../images/cover-image-dark.png");
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    padding: 20px;
+    position: relative;
+}
+.rec-indicator {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.rec-indicator::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+.link {
+    text-shadow: 2px 2px 0 var(--accent-color);
+    color: var(--text-color);
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.link:hover,
+.link:focus {
+    color: var(--accent-color);
+}
+.title-decor {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+.hero__description {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    letter-spacing: 0;
+    color: #000028;
+}
+.gallery__grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "a a b"
+    "c d b"
+    "c e e";
+}
+
+.gallery__item_1 { grid-area: a; }
+.gallery__item_2 { grid-area: b; }
+.gallery__item_3 { grid-area: c; }
+.gallery__item_4 { grid-area: d; }
+.gallery__item_5 { grid-area: e; }
+
+.gallery__item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* если нужно центрирование по высоте */
+    position: relative;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer__title {
+    font-family: IBM Plex Mono;
+    font-weight: 700;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    text-shadow: 4px 4px 0 var(--accent-color);
+    color: var(--accent-color);
+    line-height: 83%;
 }
