@@ -17,7 +17,7 @@
 
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
-    display:none
+  /*  display:none*/
 }
 .decorated-zone::before {
     content: "";

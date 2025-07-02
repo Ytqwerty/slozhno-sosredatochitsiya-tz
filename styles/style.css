@@ -15,6 +15,49 @@
     padding: 20px;
     position: relative;
 }
+.intro {
+    display: grid;
+    place-items: center;
+    padding-block-start: clamp(100px, 15vw, 200px);
+    min-height: 100vh;
+}
+.intro__content {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+}
+.intro__title {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    line-height: 95%;
+    text-shadow: 4px 4px 0 var(--accent-color);
+    color: var(--focus-bg-color);
+}
+.intro__focus {
+    color: var(--accent-color);
+}
+.intro__description {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    max-width: 355px;
+    justify-self: end;
+    text-align: left;
+    color: var(--bg-color);
+    background: var(--accent-color);
+}
+.content__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: start;
+}
+.content__title {
+    color:var(--accent-color);
+    font-size:18px;
+}
 .rec-indicator {
     position: absolute;
     top: 20px;
@@ -44,22 +87,17 @@
 .link:focus {
     color: var(--accent-color);
 }
-.title-decor {
+.section__title {
     background-color: var(--accent-color);
     color: var(--bg-color);
+    font-size: 18px;
 }
-
+.content__block p {
+    color: var(--paragraph-color);
+}
 body {
     color: var(--text-color);
     background-color: var(--bg-color);
-}
-.hero__description {
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 23.4px;
-    letter-spacing: 0;
-    color: #000028;
 }
 .gallery__grid {
     display: grid;
@@ -88,17 +126,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* если нужно центрирование по высоте */
+    min-height: 100vh;
     position: relative;
     text-align: center;
     padding: 40px 0;
 }
 
 .footer__title {
-    font-family: IBM Plex Mono;
+    font-family: "IBM Plex Mono", monospace;
     font-weight: 700;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     text-shadow: 4px 4px 0 var(--accent-color);
-    color: var(--accent-color);
+    color: var(--focus-bg-color);
     line-height: 83%;
 }

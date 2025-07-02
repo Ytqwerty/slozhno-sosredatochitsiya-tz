@@ -5,6 +5,9 @@
 :root {
     --bg-color: #000000;
     --text-color: #ffffff;
-    --accent-color: #ff0070;
+    --accent-color: #FF0070;
+    --focus-bg-color: #DB00FF;
+    --paragraph-color: #F1B2CE;
+    --main-font: 'IBM Plex Mono', monospace;
     --bg-image: url("../images/cover-image-dark.png");
 }
