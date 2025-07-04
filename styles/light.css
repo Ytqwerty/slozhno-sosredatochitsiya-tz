@@ -17,9 +17,8 @@
 
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
-  /*  display:none*/
 }
-.decorated-zone::before {
+.header::before {
     content: "";
     position: absolute;
     top: 0;
@@ -30,7 +29,7 @@
     border-right: 1px solid var(--accent-color);
 }
 
-.decorated-zone::after {
+.header::after {
     content: "";
     position: absolute;
     bottom: 0;
