@@ -1,13 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+    /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
     background-image: var(--bg-image);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
+
 .header {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -15,6 +16,7 @@
     padding: 20px;
     position: relative;
 }
+
 .header__theme-menu {
     display: flex;
     justify-content: center;
@@ -22,6 +24,7 @@
     margin: 0 auto;
     padding: 0;
 }
+
 .header__theme-menu-list {
     display: flex;
     gap: 20px;
@@ -29,6 +32,7 @@
     padding: 0;
     margin: 0;
 }
+
 .header__theme-menu-button {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
@@ -41,52 +45,94 @@
     text-transform: lowercase;
     padding: 2px 10px;
 }
+
 .header__theme-menu-button_active {
     border: 1px solid var(--accent-color);
 }
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    border-top: 1px solid var(--accent-color);
+    border-right: 1px solid var(--accent-color);
+}
+
+.intro__description::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-bottom: 1px solid var(--accent-color);
+    border-left: 1px solid var(--accent-color);
+}
+
 .intro {
     display: grid;
-    place-items: center;
-    padding-block-start: clamp(100px, 15vw, 200px);
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    justify-content: space-between;
     min-height: 100vh;
+    padding: 40px;
+    gap: 40px;
 }
+
+.intro__title-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
 .intro__content {
-    display: grid;
-    gap: 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
 }
+
 .intro__title {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 700;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    line-height: 95%;
+    line-height: 83%;
     text-shadow: 4px 4px 0 var(--accent-color);
     color: var(--focus-bg-color);
 }
-.intro__focus {
-    color: var(--accent-color);
-}
+
 .intro__description {
+    align-self: end;
     font-family: "IBM Plex Mono", monospace;
     font-weight: 700;
     font-size: 18px;
     line-height: 23px;
-    max-width: 355px;
-    justify-self: end;
-    text-align: left;
-    color: var(--bg-color);
     background: var(--accent-color);
+    color: var(--bg-color);
+    text-align: left;
 }
+
+.intro__focus {
+    color: var(--accent-color);
+}
+
+
 .content__wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
     align-items: start;
 }
+
 .content__title {
-    color:var(--accent-color);
-    font-size:18px;
+    color: var(--accent-color);
+    font-size: 18px;
 }
+
 .rec-indicator {
     position: absolute;
     top: 20px;
@@ -105,6 +151,7 @@
     background-color: var(--accent-color);
     border-radius: 50%;
 }
+
 .link {
     text-shadow: 2px 2px 0 var(--accent-color);
     color: var(--text-color);
@@ -116,29 +163,35 @@
 .link:focus {
     color: var(--accent-color);
 }
+
 .section__title {
     background-color: var(--accent-color);
     color: var(--bg-color);
     font-size: 18px;
     margin-bottom: 10px;
 }
+
 .content__block p {
     color: var(--paragraph-color);
     margin-bottom: 20px;
 }
+
 .content__grid_attention {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 20px;
 }
+
 .content__type_attention_wrapper {
     display: block;
 }
+
 body {
     color: var(--text-color);
     background-color: var(--bg-color);
 }
+
 .gallery__grid {
     display: grid;
     gap: 10px;
@@ -150,11 +203,25 @@ body {
     "c e e";
 }
 
-.gallery__item_1 { grid-area: a; }
-.gallery__item_2 { grid-area: b; }
-.gallery__item_3 { grid-area: c; }
-.gallery__item_4 { grid-area: d; }
-.gallery__item_5 { grid-area: e; }
+.gallery__item_1 {
+    grid-area: a;
+}
+
+.gallery__item_2 {
+    grid-area: b;
+}
+
+.gallery__item_3 {
+    grid-area: c;
+}
+
+.gallery__item_4 {
+    grid-area: d;
+}
+
+.gallery__item_5 {
+    grid-area: e;
+}
 
 .gallery__item {
     width: 100%;
@@ -162,6 +229,7 @@ body {
     object-fit: cover;
     display: block;
 }
+
 .footer {
     display: flex;
     justify-content: center;
