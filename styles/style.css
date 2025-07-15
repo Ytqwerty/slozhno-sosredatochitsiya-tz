@@ -49,23 +49,22 @@
 .header__theme-menu-button_active {
     border: 1px solid var(--accent-color);
 }
-
-.header::before {
+.header::after {
     content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
+    position:absolute;
     width: 25px;
     height: 25px;
-    border-top: 1px solid var(--accent-color);
-    border-right: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+    border-left: 1px solid var(--accent-color);
+    display: inline-block;
+    margin-left: 8px;
 }
 
 .intro__description::after {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 150px;
+    left: 250px;
     width: 25px;
     height: 25px;
     border-bottom: 1px solid var(--accent-color);
@@ -77,7 +76,7 @@
     grid-template-columns: 1fr auto;
     align-items: center;
     justify-content: space-between;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     padding: 40px;
     gap: 40px;
 }
@@ -134,22 +133,22 @@
 }
 
 .rec-indicator {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
     font-weight: bold;
+    font-size: 18px;
     color: var(--accent-color);
+    position: relative;
 }
 
-.rec-indicator::before {
+.rec-indicator::after {
     content: "";
-    display: inline-block;
     width: 10px;
     height: 10px;
-    margin-right: 8px;
     background-color: var(--accent-color);
     border-radius: 50%;
+    display: inline-block;
+    margin-left: 8px;
 }
 
 .link {
